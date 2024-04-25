@@ -1,0 +1,10 @@
+optional Create venv using conda create -p envname python==3.9 or you dont have to mention python
+
+
+conda activate envname
+
+install requirements file or pip install ai21 and pip install flask or pip install -u "ai21>=2" (https://docs.ai21.com/reference/python-sdk)
+
+go to ai21 studio signup and get the key : https://www.ai21.com/studio
+
+

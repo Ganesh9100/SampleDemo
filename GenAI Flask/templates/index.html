@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Background image */
+        body {
+            background-image: url('https://i.pinimg.com/236x/5c/f2/66/5cf2660af5f4214def7166dc7a7c8062.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Content container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        /* Form styling */
+        .form-group label {
+            font-weight: bold;
+        }
+
+        /* Output box styling */
+        #output {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Generative AI</h1>
+        <form id="inputForm">
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea class="form-control" id="content" name="content" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="question">Question:</label>
+                <input type="text" class="form-control" id="question" name="question">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="output">
+            <h2>GenAI Response</h2>
+            <div id="outputContent"></div>
+        </div>
+    </div>
+
+    <!-- Include jQuery (required for AJAX) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#inputForm').submit(function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get form data
+                var formData = $(this).serialize();
+
+                // Send POST request to server
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: formData,
+                    success: function(response) {
+                        // Update output with response data
+                        $('#outputContent').text('' + response);
+                        $('#output').show(); // Display the output
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
