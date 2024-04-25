@@ -45,7 +45,9 @@ def lambda_handler(event, context):
 
     completions = [output["text"] for output in outputs]
     print(completions)
-
+    st = json.loads(str(completions[0]))
+    
+    
     # return completions
 
     # response_byte = response['body'].read()
@@ -54,5 +56,5 @@ def lambda_handler(event, context):
     # t = response_string['completions'][0]['data']['text']
     return {
         'statusCode': 200,
-        'body': completions[0]
+        'body': st
     }
