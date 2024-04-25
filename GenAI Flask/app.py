@@ -4,7 +4,7 @@ from ai21 import AI21Client
 app = Flask(__name__)
 
 
-client = AI21Client(api_key="DincWiO8L70416GKy6RCKziBiCQwMFlS")
+client = AI21Client(api_key="PUT YOUR AI21 KEY HERE")
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
