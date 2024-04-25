@@ -1,6 +1,6 @@
 Input 1 
-Ganesh, Edugan28@gmail.com, 7010768017
-Harish, eduhar30311@gmail.com, nil
+Ganesh, ganesh@gmail.com, 70430168417
+Harish, harish@gmail.com, nil
 raje, raje1sss2@gmail.com, nil
 
 Question 1
