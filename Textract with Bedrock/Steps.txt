@@ -1,0 +1,7 @@
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/python/example_code/bedrock-runtime#code-examples
+for mistral 
+
+bedrock user guide : https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-runtime_example_bedrock-runtime_InvokeMixtral8x7B_section.html
+
+
+AWSSDKPandas-Python39
