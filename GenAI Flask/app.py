@@ -31,4 +31,5 @@ def answerr_genai(prompt):
     return st
 
 if __name__ == '__main__':
+    print("its updated file")
     app.run(debug=True)
